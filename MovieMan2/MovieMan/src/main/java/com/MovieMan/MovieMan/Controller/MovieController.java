@@ -34,6 +34,13 @@ public class MovieController {
         return new ResponseEntity<>(movie, HttpStatus.CREATED);
 
     }
+    @PostMapping(value="/all")
+    public ResponseEntity<List<MovieEntity>> pushMovies(@RequestBody List<MovieEntity> movies){
+        movieService.saveMovies(movies);
+        return new ResponseEntity<>(movies, HttpStatus.CREATED);
+
+    }
+
 
 
 

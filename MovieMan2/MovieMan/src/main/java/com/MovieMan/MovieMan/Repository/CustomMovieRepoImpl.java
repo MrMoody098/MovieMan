@@ -20,4 +20,5 @@ public class CustomMovieRepoImpl implements CustomMovieRepo{
         mongoTemplate.updateFirst(query,update,MovieEntity.class);
         return mongoTemplate.findById(movieId,MovieEntity.class);
     }
+
 }

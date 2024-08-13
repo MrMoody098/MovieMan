@@ -7,7 +7,6 @@ const MovieModal = ({ movie, onClose }) => {
       <div className="movie-modal-content">
         <h2>{movie.title}</h2>
         <p>Rating: {movie.rating}</p>
-        {/* Add other movie details here */}
         <button onClick={onClose}>Close</button>
       </div>
     </div>

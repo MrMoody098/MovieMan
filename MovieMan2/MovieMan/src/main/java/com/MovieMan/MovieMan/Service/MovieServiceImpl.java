@@ -86,6 +86,11 @@ public class MovieServiceImpl implements MovieService{
     }
 
     @Override
+    public List<MovieEntity> saveMovies(List<MovieEntity> movies) {
+        return movieRepository.saveAll(movies);
+    }
+
+    @Override
     public void deleteMovieById(String id) {
     movieRepository.deleteById(id);
     }

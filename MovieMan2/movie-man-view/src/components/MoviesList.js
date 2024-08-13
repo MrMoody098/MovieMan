@@ -3,7 +3,7 @@ import axios from 'axios';
 import '../MoviesList.css';
 import MovieDetails from './MovieDetails';
 import Modal from 'react-modal'; // Import react-modal
-
+import NavBar from './NavBar';
 const MoviesList = () => {
   const [movies, setMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState(null);
@@ -28,7 +28,9 @@ const MoviesList = () => {
     setIsModalOpen(false); // Close the modal
   };
 
-  return (
+  return (<div>
+        <NavBar />
+
     <div className="movies-container">
       {movies.map(movie => (
         <div
@@ -55,6 +57,7 @@ const MoviesList = () => {
         {selectedMovie && <MovieDetails movie={selectedMovie} />}
         <button onClick={closeModal}>Close</button>
       </Modal>
+    </div>
     </div>
   );
 };

@@ -24,5 +24,7 @@ public interface MovieService {
 
     List<ReviewEntity> findReviewByMovieId(String movieId);
 
+    List<MovieEntity> saveMovies(List<MovieEntity>movies);
+
     void deleteMovieById(String id);
 }
